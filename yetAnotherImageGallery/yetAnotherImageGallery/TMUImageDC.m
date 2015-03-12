@@ -15,6 +15,8 @@
 #define kImageItemsKey @"items"
 #define kImageTitleKey @"title"
 #define kImageLinkKey @"link"
+#define kImageMediaKey @"media"
+#define kImageMKey @"m"
 #define kImageDescriptionKey @"description"
 #define kImageDateTakenKey @"date_taken"
 #define kImageDatePublishedKey @"published"
@@ -92,7 +94,11 @@
                         TMUImageDescriptor* imageDescriptor = [[TMUImageDescriptor alloc] init];
 
                         imageDescriptor.title = [imageItem objectForKey:kImageTitleKey];
-                        imageDescriptor.link = [imageItem objectForKey:kImageLinkKey];
+                        
+                        imageDescriptor.link = [NSURL URLWithString:[imageItem objectForKey:kImageLinkKey]];
+                        NSString* mediaString = [[imageItem objectForKey:kImageMediaKey] objectForKey:kImageMKey];
+                        imageDescriptor.media = [NSURL URLWithString:mediaString];
+                        
                         imageDescriptor.desc = [imageItem objectForKey:kImageDescriptionKey];
                         if ([imageItem objectForKey:kImageDateTakenKey] != nil) {
                             imageDescriptor.dateTaken = [rfc3339DateFormatter dateFromString:[imageItem objectForKey:kImageDateTakenKey]];

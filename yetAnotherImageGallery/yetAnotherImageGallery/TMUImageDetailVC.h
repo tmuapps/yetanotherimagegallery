@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class TMUImageWithDescriptor;
+
 @interface TMUImageDetailVC : UIViewController
 
-@property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong, nonatomic) TMUImageWithDescriptor* imageWithDescriptor;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *tagsView;
+
+- (IBAction)openInBrowserAction:(id)sender;
+- (IBAction)shareAction:(id)sender;
+- (IBAction)saveAction:(id)sender;
 
 @end
 

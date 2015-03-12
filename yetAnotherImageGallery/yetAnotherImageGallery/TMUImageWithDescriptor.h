@@ -13,7 +13,7 @@
 @interface TMUImageWithDescriptor : NSObject
 
 @property (nonatomic, retain) TMUImageDescriptor* imageDescriptor;
-@property (nonatomic, retain, readonly) UIImage* image;
+@property (nonatomic, retain) UIImage* image;
 
 - (void) getImageWithCompletionBlock: (void (^) (UIImage*)) imageHandler;
 

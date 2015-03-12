@@ -31,7 +31,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
     //Uncomment the next line to add theediut button
     //    self.navigationItem.leftBarButtonItem = self.editButtonItem;
@@ -67,9 +66,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         TMUImageDetailVC *controller = (TMUImageDetailVC *)[[segue destinationViewController] topViewController];
-        [controller setDetailItem:object];
+        [controller setImageWithDescriptor:[[self imageDC] imageAtIndex:indexPath.row]];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
     }
@@ -113,29 +111,51 @@
 
 - (void)configureCell:(TMUImageListTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     TMUImageWithDescriptor* imageWithDescriptor = [self.imageDC imageAtIndex:indexPath.row];
+    TMUImageDescriptor* imageDescriptor = imageWithDescriptor.imageDescriptor;
     //Title
-     [cell.imageTitle setText: ( [[imageWithDescriptor imageDescriptor] title] != nil )
-                               ? [[imageWithDescriptor imageDescriptor] title]
+     [cell.imageTitle setText: ( [imageDescriptor title] != nil )
+                               ? [imageDescriptor title]
                                : NSLocalizedString(@"Unknown title",nil)
      ];
 
     //Author
-    [cell.imageAuthor setText: ( [[imageWithDescriptor imageDescriptor] author] != nil )
-                            ? [[imageWithDescriptor imageDescriptor] author]
+    [cell.imageAuthor setText: ( [imageDescriptor author] != nil )
+                            ? [imageDescriptor author]
                             : NSLocalizedString(@"Unknown Author",nil)
      ];
 
     //Date published
-    [cell.dateImagePublished setText: ( [[imageWithDescriptor imageDescriptor] datePublished] != nil )
-                             ? [ dateFormatter stringFromDate:[[imageWithDescriptor imageDescriptor] datePublished]]
+    [cell.dateImagePublished setText: ( [imageDescriptor datePublished] != nil )
+                             ? [ dateFormatter stringFromDate:[imageDescriptor datePublished]]
                              : NSLocalizedString(@"Unknown",nil)
      ];
 
     //Date captured (taken)
-    [cell.dateImageCaptured setText: ( [[imageWithDescriptor imageDescriptor] dateTaken] != nil )
-                             ? [ dateFormatter stringFromDate:[[imageWithDescriptor imageDescriptor] dateTaken]]
+    [cell.dateImageCaptured setText: ( [imageDescriptor dateTaken] != nil )
+                             ? [ dateFormatter stringFromDate:[imageDescriptor dateTaken]]
                              : NSLocalizedString(@"Unknown",nil)
      ];
+
+    //Image
+    if ([imageWithDescriptor image]  != nil) {
+        [cell.image setImage:[imageWithDescriptor image]];
+    } else {
+        //Set the image to nil, in case this is a reused cell with an old image
+        [cell.image setImage:nil];
+        
+        //Request asynchronous retrieval of correct image
+        [imageWithDescriptor getImageWithCompletionBlock: ^(UIImage* image) {
+            if (image != nil) {
+                NSArray* visibleImageIndexes = [self.tableView indexPathsForVisibleRows];
+                if (   indexPath.row >= ((NSIndexPath*)visibleImageIndexes[0]).row
+                    && indexPath.row <= ((NSIndexPath*)visibleImageIndexes[visibleImageIndexes.count-1]).row
+                    ) {
+                    //post reload the row
+                    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+                }
+            }
+        }];
+    }
 }
 
 -(void) organizeList:(id) action {

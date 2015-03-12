@@ -7,6 +7,7 @@
 //
 
 #import "TMUImageWithDescriptor.h"
+#import "TMUImageDC.h"
 
 @implementation TMUImageWithDescriptor
 
@@ -21,11 +22,19 @@
         }];
     } else {
         //getTheImage from the web, link in imageDescriptor.link
-        
-        // Call the completion handler with the returned data on the main thread.
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            imageHandler(self.image);
-        }];
+        if (self.imageDescriptor.link != nil) {
+            [TMUImageDC downloadDataFromURL:self.imageDescriptor.media withCompletionHandler:^(NSData* imageData){
+                // Create the uiimage from the returned data
+                self.image = [UIImage imageWithData:imageData];
+                
+                // Call the image handler with the returned data on the main thread.
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    imageHandler(self.image);
+                }];
+                
+            }];
+        }
+        //Note: if there is no link in the descriptor, we cannot download the image so the imageHandler is not called!
     }
 }
 

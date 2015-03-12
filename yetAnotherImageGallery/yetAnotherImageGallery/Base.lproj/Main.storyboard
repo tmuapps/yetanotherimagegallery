@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Master-->
@@ -31,25 +32,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
-                                <rect key="frame" x="20" y="292" width="560" height="17"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hed-hN-Xot">
+                                <rect key="frame" x="20" y="20" width="560" height="465"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccj-45-IGd">
+                                <rect key="frame" x="20" y="493" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="13I-CW-J1V"/>
+                                    <constraint firstAttribute="height" constant="21" id="dNF-IY-lrh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TagsText" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvt-Ra-eKE">
+                                <rect key="frame" x="80" y="493" width="504" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="pyP-ZH-CZb">
+                                <rect key="frame" x="16" y="556" width="568" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tzJ-E0-q2Z"/>
+                                    <barButtonItem title="Browser" id="mXu-JG-8ht">
+                                        <connections>
+                                            <action selector="openInBrowserAction:" destination="JEX-9P-axG" id="4f7-pq-joJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="OM6-VM-oR0"/>
+                                    <barButtonItem title="Share" id="Y0p-sI-bEX">
+                                        <connections>
+                                            <action selector="shareAction:" destination="JEX-9P-axG" id="tsc-HP-ALY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qug-dc-9ey"/>
+                                    <barButtonItem title="Save" id="Uls-Is-pxE">
+                                        <connections>
+                                            <action selector="saveAction:" destination="JEX-9P-axG" id="PrB-Y0-fNq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="U9F-Om-g2x"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="Tsc-yG-G1q"/>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" id="jWN-iV-94e"/>
-                            <constraint firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="20" symbolic="YES" id="tHV-ZD-HQj"/>
+                            <constraint firstItem="pyP-ZH-CZb" firstAttribute="top" secondItem="ccj-45-IGd" secondAttribute="bottom" constant="42" id="IqW-85-Uq1"/>
+                            <constraint firstItem="ccj-45-IGd" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" id="OAs-i2-bRt"/>
+                            <constraint firstAttribute="trailing" secondItem="hed-hN-Xot" secondAttribute="trailing" constant="20" symbolic="YES" id="TMW-gG-I65"/>
+                            <constraint firstItem="ccj-45-IGd" firstAttribute="top" secondItem="hed-hN-Xot" secondAttribute="bottom" constant="8" symbolic="YES" id="X5N-Rs-RpC"/>
+                            <constraint firstItem="hed-hN-Xot" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="Yry-Uw-tDf"/>
+                            <constraint firstItem="pyP-ZH-CZb" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="afd-Nr-Lyj"/>
+                            <constraint firstItem="pyP-ZH-CZb" firstAttribute="bottom" secondItem="GAO-Cl-Wes" secondAttribute="top" id="c7i-pI-mJs"/>
+                            <constraint firstItem="Qvt-Ra-eKE" firstAttribute="leading" secondItem="ccj-45-IGd" secondAttribute="trailing" constant="18" id="cgV-pt-ipv"/>
+                            <constraint firstAttribute="trailing" secondItem="Qvt-Ra-eKE" secondAttribute="trailing" constant="16" id="gs0-7t-wXw"/>
+                            <constraint firstItem="hed-hN-Xot" firstAttribute="top" secondItem="svH-Pt-448" secondAttribute="top" constant="20" symbolic="YES" id="nxk-7I-aI5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pyP-ZH-CZb" secondAttribute="trailing" id="r6o-Yt-3Gl"/>
+                            <constraint firstItem="ccj-45-IGd" firstAttribute="top" secondItem="Qvt-Ra-eKE" secondAttribute="top" id="s9l-2f-hmL"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
                     <connections>
-                        <outlet property="detailDescriptionLabel" destination="0XM-y9-sOw" id="deQ-Na-JPF"/>
+                        <outlet property="imageView" destination="hed-hN-Xot" id="W6W-91-Yhm"/>
+                        <outlet property="tagsView" destination="Qvt-Ra-eKE" id="Wmf-D3-rmF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
@@ -86,8 +133,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="quB-lI-EwH">
-                                            <rect key="frame" x="0.0" y="9" width="128" height="128"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="quB-lI-EwH">
+                                            <rect key="frame" x="20" y="9" width="128" height="128"/>
                                             <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="128" id="9Pb-rx-eMn"/>
@@ -120,7 +167,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="quB-lI-EwH" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="top" constant="9" id="11k-LQ-L8G"/>
-                                        <constraint firstItem="quB-lI-EwH" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leading" id="J89-bD-95L"/>
+                                        <constraint firstItem="quB-lI-EwH" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leading" constant="20" symbolic="YES" id="J89-bD-95L"/>
                                         <constraint firstAttribute="bottom" secondItem="quB-lI-EwH" secondAttribute="bottom" constant="18" id="lzg-bP-jBN"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -128,6 +175,7 @@
                                 <connections>
                                     <outlet property="dateImageCaptured" destination="jfg-oL-dcC" id="u8t-kt-sr5"/>
                                     <outlet property="dateImagePublished" destination="hfR-QX-n8x" id="Fbu-lM-rRa"/>
+                                    <outlet property="image" destination="quB-lI-EwH" id="8LO-q8-G2u"/>
                                     <outlet property="imageAuthor" destination="IJd-ER-q4t" id="MtD-Tm-w6d"/>
                                     <outlet property="imageTitle" destination="acn-Ao-9JX" id="ymV-pv-DQb"/>
                                     <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
