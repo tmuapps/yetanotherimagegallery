@@ -8,14 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "TMUImageDC.h"
 
-@class DetailViewController;
+@class TMUImageDetailVC;
 
-@interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface TMUImageListVC : UITableViewController <NSFetchedResultsControllerDelegate>
 
-@property (strong, nonatomic) DetailViewController *detailViewController;
+@property (strong, nonatomic) TMUImageDetailVC *detailViewController;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+
+@property (strong, nonatomic) TMUImageDC* imageDC;
+
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 

@@ -8,14 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		22488F941AAF55A200FDF78D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22488F931AAF55A200FDF78D /* main.m */; };
-		22488F971AAF55A300FDF78D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22488F961AAF55A300FDF78D /* AppDelegate.m */; };
+		22488F971AAF55A300FDF78D /* TMUIMageGalleryAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22488F961AAF55A300FDF78D /* TMUIMageGalleryAppDelegate.m */; };
 		22488F9A1AAF55A300FDF78D /* yetAnotherImageGallery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22488F981AAF55A300FDF78D /* yetAnotherImageGallery.xcdatamodeld */; };
-		22488F9D1AAF55A300FDF78D /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22488F9C1AAF55A300FDF78D /* MasterViewController.m */; };
-		22488FA01AAF55A300FDF78D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22488F9F1AAF55A300FDF78D /* DetailViewController.m */; };
+		22488F9D1AAF55A300FDF78D /* TMUImageListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22488F9C1AAF55A300FDF78D /* TMUImageListVC.m */; };
+		22488FA01AAF55A300FDF78D /* TMUImageDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22488F9F1AAF55A300FDF78D /* TMUImageDetailVC.m */; };
 		22488FA31AAF55A300FDF78D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22488FA11AAF55A300FDF78D /* Main.storyboard */; };
 		22488FA51AAF55A300FDF78D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22488FA41AAF55A300FDF78D /* Images.xcassets */; };
 		22488FA81AAF55A300FDF78D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22488FA61AAF55A300FDF78D /* LaunchScreen.xib */; };
 		22488FB41AAF55A300FDF78D /* yetAnotherImageGalleryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22488FB31AAF55A300FDF78D /* yetAnotherImageGalleryTests.m */; };
+		22488FBF1AB07B8700FDF78D /* TMUImageDC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22488FBE1AB07B8700FDF78D /* TMUImageDC.m */; };
+		22488FC21AB09F3C00FDF78D /* TMUImageDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 22488FC11AB09F3C00FDF78D /* TMUImageDescriptor.m */; };
+		22488FC51AB09F5A00FDF78D /* TMUImageWithDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 22488FC41AB09F5A00FDF78D /* TMUImageWithDescriptor.m */; };
+		22D008A21AB1C2E4005A5A87 /* TMUImageListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D008A11AB1C2E4005A5A87 /* TMUImageListTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,19 +36,27 @@
 		22488F8E1AAF55A200FDF78D /* yetAnotherImageGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yetAnotherImageGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22488F921AAF55A200FDF78D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22488F931AAF55A200FDF78D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		22488F951AAF55A200FDF78D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		22488F961AAF55A300FDF78D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		22488F951AAF55A200FDF78D /* TMUIMageGalleryAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMUIMageGalleryAppDelegate.h; sourceTree = "<group>"; };
+		22488F961AAF55A300FDF78D /* TMUIMageGalleryAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMUIMageGalleryAppDelegate.m; sourceTree = "<group>"; };
 		22488F991AAF55A300FDF78D /* yetAnotherImageGallery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = yetAnotherImageGallery.xcdatamodel; sourceTree = "<group>"; };
-		22488F9B1AAF55A300FDF78D /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		22488F9C1AAF55A300FDF78D /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		22488F9E1AAF55A300FDF78D /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		22488F9F1AAF55A300FDF78D /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		22488F9B1AAF55A300FDF78D /* TMUImageListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMUImageListVC.h; sourceTree = "<group>"; };
+		22488F9C1AAF55A300FDF78D /* TMUImageListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMUImageListVC.m; sourceTree = "<group>"; };
+		22488F9E1AAF55A300FDF78D /* TMUImageDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMUImageDetailVC.h; sourceTree = "<group>"; };
+		22488F9F1AAF55A300FDF78D /* TMUImageDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMUImageDetailVC.m; sourceTree = "<group>"; };
 		22488FA21AAF55A300FDF78D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22488FA41AAF55A300FDF78D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		22488FA71AAF55A300FDF78D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		22488FAD1AAF55A300FDF78D /* yetAnotherImageGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yetAnotherImageGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22488FB21AAF55A300FDF78D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22488FB31AAF55A300FDF78D /* yetAnotherImageGalleryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yetAnotherImageGalleryTests.m; sourceTree = "<group>"; };
+		22488FBD1AB07B8700FDF78D /* TMUImageDC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMUImageDC.h; sourceTree = "<group>"; };
+		22488FBE1AB07B8700FDF78D /* TMUImageDC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMUImageDC.m; sourceTree = "<group>"; };
+		22488FC01AB09F3C00FDF78D /* TMUImageDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMUImageDescriptor.h; sourceTree = "<group>"; };
+		22488FC11AB09F3C00FDF78D /* TMUImageDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMUImageDescriptor.m; sourceTree = "<group>"; };
+		22488FC31AB09F5A00FDF78D /* TMUImageWithDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMUImageWithDescriptor.h; sourceTree = "<group>"; };
+		22488FC41AB09F5A00FDF78D /* TMUImageWithDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMUImageWithDescriptor.m; sourceTree = "<group>"; };
+		22D008A01AB1C2E4005A5A87 /* TMUImageListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMUImageListTableViewCell.h; sourceTree = "<group>"; };
+		22D008A11AB1C2E4005A5A87 /* TMUImageListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMUImageListTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,16 +98,24 @@
 		22488F901AAF55A200FDF78D /* yetAnotherImageGallery */ = {
 			isa = PBXGroup;
 			children = (
-				22488F951AAF55A200FDF78D /* AppDelegate.h */,
-				22488F961AAF55A300FDF78D /* AppDelegate.m */,
-				22488F9B1AAF55A300FDF78D /* MasterViewController.h */,
-				22488F9C1AAF55A300FDF78D /* MasterViewController.m */,
-				22488F9E1AAF55A300FDF78D /* DetailViewController.h */,
-				22488F9F1AAF55A300FDF78D /* DetailViewController.m */,
-				22488FA11AAF55A300FDF78D /* Main.storyboard */,
-				22488FA41AAF55A300FDF78D /* Images.xcassets */,
 				22488FA61AAF55A300FDF78D /* LaunchScreen.xib */,
+				22488FA11AAF55A300FDF78D /* Main.storyboard */,
 				22488F981AAF55A300FDF78D /* yetAnotherImageGallery.xcdatamodeld */,
+				22488FA41AAF55A300FDF78D /* Images.xcassets */,
+				22488F951AAF55A200FDF78D /* TMUIMageGalleryAppDelegate.h */,
+				22488F961AAF55A300FDF78D /* TMUIMageGalleryAppDelegate.m */,
+				22488F9B1AAF55A300FDF78D /* TMUImageListVC.h */,
+				22488F9C1AAF55A300FDF78D /* TMUImageListVC.m */,
+				22D008A01AB1C2E4005A5A87 /* TMUImageListTableViewCell.h */,
+				22D008A11AB1C2E4005A5A87 /* TMUImageListTableViewCell.m */,
+				22488F9E1AAF55A300FDF78D /* TMUImageDetailVC.h */,
+				22488F9F1AAF55A300FDF78D /* TMUImageDetailVC.m */,
+				22488FBD1AB07B8700FDF78D /* TMUImageDC.h */,
+				22488FBE1AB07B8700FDF78D /* TMUImageDC.m */,
+				22488FC01AB09F3C00FDF78D /* TMUImageDescriptor.h */,
+				22488FC11AB09F3C00FDF78D /* TMUImageDescriptor.m */,
+				22488FC31AB09F5A00FDF78D /* TMUImageWithDescriptor.h */,
+				22488FC41AB09F5A00FDF78D /* TMUImageWithDescriptor.m */,
 				22488F911AAF55A200FDF78D /* Supporting Files */,
 			);
 			path = yetAnotherImageGallery;
@@ -227,11 +247,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22488FA01AAF55A300FDF78D /* DetailViewController.m in Sources */,
-				22488F9D1AAF55A300FDF78D /* MasterViewController.m in Sources */,
+				22488FA01AAF55A300FDF78D /* TMUImageDetailVC.m in Sources */,
+				22488FC21AB09F3C00FDF78D /* TMUImageDescriptor.m in Sources */,
+				22488F9D1AAF55A300FDF78D /* TMUImageListVC.m in Sources */,
 				22488F9A1AAF55A300FDF78D /* yetAnotherImageGallery.xcdatamodeld in Sources */,
-				22488F971AAF55A300FDF78D /* AppDelegate.m in Sources */,
+				22488FBF1AB07B8700FDF78D /* TMUImageDC.m in Sources */,
+				22488F971AAF55A300FDF78D /* TMUIMageGalleryAppDelegate.m in Sources */,
+				22D008A21AB1C2E4005A5A87 /* TMUImageListTableViewCell.m in Sources */,
 				22488F941AAF55A200FDF78D /* main.m in Sources */,
+				22488FC51AB09F5A00FDF78D /* TMUImageWithDescriptor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +448,7 @@
 				22488FB91AAF55A300FDF78D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22488FBA1AAF55A300FDF78D /* Build configuration list for PBXNativeTarget "yetAnotherImageGalleryTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +457,7 @@
 				22488FBC1AAF55A300FDF78D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

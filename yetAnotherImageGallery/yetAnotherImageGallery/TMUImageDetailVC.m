@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 tmuApps. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "TMUImageDetailVC.h"
 
-@interface DetailViewController ()
+@interface TMUImageDetailVC ()
 
 @end
 
-@implementation DetailViewController
+@implementation TMUImageDetailVC
 
 #pragma mark - Managing the detail item
 
