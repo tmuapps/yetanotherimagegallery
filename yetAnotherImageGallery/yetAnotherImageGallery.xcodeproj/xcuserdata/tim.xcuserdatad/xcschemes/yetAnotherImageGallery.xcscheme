@@ -3,7 +3,7 @@
    LastUpgradeVersion = "0610"
    version = "1.3">
    <BuildAction
-      parallelizeBuildables = "YES"
+      parallelizeBuildables = "NO"
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
@@ -34,6 +34,20 @@
                ReferencedContainer = "container:yetAnotherImageGallery.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "22C1B8BE1AB45AB60073744A"
+               BuildableName = "testFrameworkTests.xctest"
+               BlueprintName = "testFrameworkTests"
+               ReferencedContainer = "container:yetAnotherImageGallery.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "22488FAC1AAF55A300FDF78D"
                BuildableName = "yetAnotherImageGalleryTests.xctest"
                BlueprintName = "yetAnotherImageGalleryTests"
+               ReferencedContainer = "container:yetAnotherImageGallery.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "22C1B8BE1AB45AB60073744A"
+               BuildableName = "testFrameworkTests.xctest"
+               BlueprintName = "testFrameworkTests"
                ReferencedContainer = "container:yetAnotherImageGallery.xcodeproj">
             </BuildableReference>
          </TestableReference>

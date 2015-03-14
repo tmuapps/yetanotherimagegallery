@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0A48B878-FFC5-4881-8F5D-05B621C0E049</string>
+	<key>IDESourceControlProjectName</key>
+	<string>yetAnotherImageGallery</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0FFC54F3C5D6035FB2C04B821D43547C8ECEFA3E</key>
+		<string>https://github.com/tmuapps/yetanotherimagegallery</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>yetAnotherImageGallery/yetAnotherImageGallery.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0FFC54F3C5D6035FB2C04B821D43547C8ECEFA3E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tmuapps/yetanotherimagegallery</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0FFC54F3C5D6035FB2C04B821D43547C8ECEFA3E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0FFC54F3C5D6035FB2C04B821D43547C8ECEFA3E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>yetanotherimagegallery</string>
+		</dict>
+	</array>
+</dict>
+</plist>
